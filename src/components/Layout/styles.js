@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Content } from "carbon-components-react/lib/components/UIShell";
 
-export const StyledComponent = styled(Content)`
+export const StyledContent = styled(Content)`
     min-height: 100vh;
     
     @media (max-width:640px){
