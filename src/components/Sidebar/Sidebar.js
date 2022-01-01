@@ -2,7 +2,7 @@ import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {SideNavItems, SideNavLink} from 'carbon-components-react/lib/components/UIShell';
 
-import { StyledSideNav } from './style';
+import { StyledSideNav } from './styles';
 
 const items = [
     {name: 'Me', path: '/'},
@@ -15,7 +15,7 @@ const Sidebar = () => {
     const location = useLocation();
 
     return(
-        <StyledSideNav isFixedNav expand isChildOfHeader={false} aria-label "Side Navigation">
+        <StyledSideNav isFixedNav expand isChildOfHeader={false} aria-label = "Side Navigation">
             <SideNavItems>
                 {items.map(i => (
                     <SideNavLink isActive={location.pathname === '/' ? true: location.pathname === i.path}

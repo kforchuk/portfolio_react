@@ -22,13 +22,13 @@ export const NavWrapper = styled.div `
     top: 0;
     left: 0;
     z-index: 1;
-;
+`;
 
 export const NavLink = styled(Link)` 
     width: 25%;
 `;
 
-export const NavButton = styled(Button)` 
+export const NavButton = styled(button)` 
     width: 100%;
     justify-content: center;
 `;
