@@ -2,23 +2,23 @@ import React from 'react';
 import {Link, useLocation} from 'react-router-dom';
 import {SideNavItems, SideNavLink} from 'carbon-components-react/lib/components/UIShell';
 
-import { StyledSideNav } from './style';
+import { StyledSideNav } from './styles';
 
 const items = [
-    {name: 'Me', path: '/'},
-    {name: 'Projects', path: '/projects'},
-    {name: 'Work', path: '/work'},
-    {name: 'Education', path: '/education'},
+    {name: 'Me', path: 'portfolio_react/'},
+    {name: 'Projects', path: 'portfolio_react/projects'},
+    {name: 'Work', path: 'portfolio_react/work'},
+    {name: 'Education', path: 'portfolio_react/education'},
 ];
 
 const Sidebar = () => {
     const location = useLocation();
 
     return(
-        <StyledSideNav isFixedNav expand isChildOfHeader={false} aria-label "Side Navigation">
+        <StyledSideNav isFixedNav expand isChildOfHeader={false} aria-label = "Side Navigation">
             <SideNavItems>
                 {items.map(i => (
-                    <SideNavLink isActive={location.pathname === '/' ? true: location.pathname === i.path}
+                    <SideNavLink isActive={location.pathname === 'portfolio_react/' ? true: location.pathname === i.path}
                     element={Link}
                     to={i.path}
                     key={i.name}
